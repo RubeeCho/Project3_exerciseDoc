@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*heading*/
+#Workout_Plan h1 {
+  font-family: Georgia;
+  font-weight: lighter;
+  font-size: 31px;
+  margin: 40px 0 0 0 ;
+}
+#Workout_Plan p {
+  font-family: Helvetica;
+  font-size: 12px;
+}
+#Workout_Plan{
+  color: #212121;
+  text-align: center;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 130px;
+}
+
+
+/* Container for the entire layout */
+#main-doc {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+/* Sidebar styles */
+#navbar {
+    background-color: #fff;
+    padding: 0 40px 30px 40px;
+    border-right: 1px solid #d0d0d0;
+    font-size: 14px;
+    font-family: Helvetica;
+}
+#navbar li {
+    list-style: none;
+    margin-bottom: 18px;
+}
+#navbar a {
+    text-decoration: none;
+    color: #006847;
+}
+#navbar header {
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #212121;
+}
+
+
+/* Main information styles */
+.main-section:not(#Workout_Plan) {
+    margin: 10px 50px;
+}
+/*information heading*/
+.main h1{
+    font-weight: 100;
+    font-family: "Georgia";
+}
+fieldset {
+    width: 100%; 
+    height: 24px; 
+    border: 1px solid transparent; 
+    border-top-color: #d0d0d0; 
+    margin: auto;
+}
+legend{
+    margin: auto; 
+    padding: 0 15px;
+}
+/*information content*/
+#content {
+    margin: 30px 10px;
+}
+#content p {
+    font-family: Helvetica;  
+    color: #212121;
+}
+/*information exercises and discriptions*/
+h3 {
+    font-family: Georgia; 
+    font-weight: lighter;
+}
+#info {
+    padding: 10px 14px;
+}
+#volume{
+    padding-left: 90px;
+    padding-bottom: 50px;
+}
+code {
+    padding-right: 40px;
+}
+
+/*information table*/
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: auto;
+}
+th {
+    font-family: Georgia;
+}
+td {
+    font-family: Helvetica;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+td:not(#term) {
+    text-align: center;
+}
+
+
+/* Default styles for wider screens */
+@media screen and (min-width: 768px) {
+    #navbar {
+        width: 185px;
+        min-height: 100vh;
+        top: 0;
+        overflow: auto;
+    }
+
+    #main-doc {
+        flex-direction: row;
+    }
+
+    .main {
+    flex: 1;
+    }
+
+}
+
+/* Styles for narrower screens */
+@media screen and (max-width: 767px) {
+    #main-doc {
+        flex-direction: column;
+    }
+
+    #navbar {
+        width: 100%;
+        height: 100px;
+        overflow: auto;
+        border-right: none;
+        border-bottom: 1px solid #d0d0d0;
+    }
+
+    .main {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
